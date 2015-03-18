@@ -4,7 +4,7 @@ import xbmc
 if __name__ == '__main__':
     monitor = xbmc.Monitor()
 
-    with GPIOPin(10) as pin:
+    with GPIOPin(3) as pin: #Pin 3 sseems to be good.
 	    while True:
 	        # Sleep/wait for abort for 1 second
 	        if monitor.waitForAbort(1):
@@ -36,3 +36,4 @@ class GPIOPin:
 # http://elinux.org/RPi_Low-level_peripherals
 # http://openelec.tv/forum/124-raspberry-pi/70693-gpio-pins-in-use
 # http://kodi.wiki/view/List_of_Built_In_Functions
+# http://raspberrypi.stackexchange.com/questions/19718/will-pulling-pin-5-low-will-make-the-pi-boot-up-again/19754#19754
